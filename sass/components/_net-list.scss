@@ -1,0 +1,37 @@
+.net-list {
+    @include centeredFlex($justify: space-between);
+
+    width: 206px;
+    height: 44px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    &__link {
+        @include centeredFlex($justify: center);
+
+        width: 44px;
+        height: 44px;
+
+        color: $net-list-color;
+        border-radius: 50%;
+
+        transition: background-color 250ms $transform-effect,
+            color 250ms $transform-effect;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+            background-color: $secondary-color;
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+
+    &__link--bgd {
+        color: $color-white;
+        background-color: $net-list-bgd-color;
+    }
+}
